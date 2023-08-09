@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char alpha[]="abcdefghijklmnopqrstuvwxyz";
+	char key[]="zyxwvutsrqponmlkjihgfedcba";
+	char a[100];
+	printf("Enter the plain Text : ");
+	scanf("%[^\n]s",a);
+	printf("Encrypted value : ");
+	for(int i=0;i<strlen(a);i++){
+		for(int j=0;j<26;j++){
+			if(a[i]==alpha[j]){
+				a[i]=key[j];
+				break;
+			}
+		}
+		printf("%c",a[i]);
+	}
+}
